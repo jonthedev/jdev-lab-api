@@ -47,6 +47,14 @@ Modules will be added to `src/` as each new technology is integrated.
 
 ---
 
+## Data
+
+To run DuckDB queries locally, download the dataset and place it in `data/`:
+
+- **Spotify Tracks Dataset** — [kaggle.com/datasets/yashdev01/spotify-tracks-dataset](https://www.kaggle.com/datasets/yashdev01/spotify-tracks-dataset)
+
+---
+
 ## Milestones
 
 - `v0.1` — NestJS foundations: modules, controllers, services, routing

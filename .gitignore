@@ -22,3 +22,6 @@ logs/
 
 # pnpm
 .pnpm-debug.log*
+
+# Data files
+data/
