@@ -1,24 +1,22 @@
 # jdev-lab-api
 
-Personal backend built to develop and demonstrate full-stack product engineering skills. This is a living project — each technology is integrated progressively as it's learned, rather than scaffolded all at once.
+The NestJS REST API powering the lab section of [j-dev.online](https://j-dev.online). Built progressively — each technology is integrated as it's learned, with every milestone adding a real capability to the running system.
 
-Part of the [JDev Online](https://j-dev.online) lab: backend architecture, data modeling, and AI-ready APIs.
+The end goal is a **RAG-powered chat assistant**: visitors can ask questions about my work and experience, with answers grounded in CV and project data stored in PostgreSQL and served via a locally running Ollama LLM.
+
+See [ROADMAP.md](./ROADMAP.md) for the full technology breakdown, use cases, and reasoning behind each choice.
 
 ---
 
-## What This Is
-
-A NestJS REST API that grows with the stack. The goal is to build a real, working backend from first principles — understanding every layer rather than generating it.
-
-**Stack (progressive)**
+## Stack
 
 | Layer | Technology | Status |
 |---|---|---|
-| API framework | NestJS + TypeScript | In progress |
-| Database | PostgreSQL | Pending |
-| Containerisation | Docker + Compose | Pending |
-| Analytics | DuckDB | Pending |
-| AI integration | Ollama (local) | Pending |
+| API framework | NestJS + TypeScript | v0.1 ✓ |
+| Database + ORM | PostgreSQL + Prisma | v0.2 |
+| Containerisation | Docker + Compose | v0.3 |
+| RAG knowledge base | Knowledge module | v0.4 |
+| AI integration | Ollama (local dev) → hosted LLM (production) | v0.5 |
 
 ---
 
@@ -33,35 +31,13 @@ API runs on `http://localhost:3000` by default.
 
 ---
 
-## Project Structure
-
-```
-src/
-├── main.ts               # Entry point
-├── app.module.ts         # Root module
-├── app.controller.ts     # Root route handler
-└── app.service.ts        # Root service
-```
-
-Modules will be added to `src/` as each new technology is integrated.
-
----
-
-## Data
-
-To run DuckDB queries locally, download the dataset and place it in `data/`:
-
-- **Spotify Tracks Dataset** — [kaggle.com/datasets/yashdev01/spotify-tracks-dataset](https://www.kaggle.com/datasets/yashdev01/spotify-tracks-dataset)
-
----
-
 ## Milestones
 
-- `v0.1` — NestJS foundations: modules, controllers, services, routing
-- `v0.2` — PostgreSQL: database module, TypeORM, migrations
+- `v0.1` — NestJS foundations: modules, controllers, services, routing ✓
+- `v0.2` — PostgreSQL + Prisma: projects module with full CRUD
 - `v0.3` — Docker: containerised API + Postgres via Compose
-- `v0.4` — DuckDB: analytics module alongside Postgres
-- `v0.5` — Ollama: local AI integration via REST
+- `v0.4` — Knowledge module: ingest CV and project markdown into Postgres
+- `v0.5` — Chat module: RAG endpoint querying Ollama with retrieved context
 
 ---
 

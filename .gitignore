@@ -25,3 +25,6 @@ logs/
 
 # Data files
 data/
+
+# Local context files
+ROADMAP.md
