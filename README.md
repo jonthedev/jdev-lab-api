@@ -4,8 +4,6 @@ The NestJS REST API powering the lab section of [j-dev.online](https://j-dev.onl
 
 The end goal is a **RAG-powered chat assistant**: visitors can ask questions about my work and experience, with answers grounded in CV and project data stored in PostgreSQL and served via a locally running Ollama LLM.
 
-See [ROADMAP.md](./ROADMAP.md) for the full technology breakdown, use cases, and reasoning behind each choice.
-
 ---
 
 ## Stack
